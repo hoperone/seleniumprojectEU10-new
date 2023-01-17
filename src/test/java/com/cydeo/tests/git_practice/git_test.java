@@ -7,5 +7,6 @@ public class git_test {
     @Test
     public void test1(){
         System.out.println("test1");
+        System.out.println("Test2");
     }
 }
