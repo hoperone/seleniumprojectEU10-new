@@ -1,0 +1,54 @@
+
+In the context of software testing, an assertion is a statement that specifies a condition that is expected to be true at a certain point in the code.
+If the condition is not true, the assertion fails, and the test will be considered to have failed.
+
+Assertions are commonly used in test methods to verify that the code being tested is behaving as expected.
+For example, you might use an assertion to verify that a method is returning the correct result, or that an exception is being thrown when it is supposed to be.
+
+In TestNG, assertions are typically performed using the Assert class, which provides a set of static methods for making assertions.
+Here is an example of how to use the Assert class to perform an assertion in a TestNG test method:
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class TestClass {
+
+    @Test
+    public void testMethod() {
+        int actual = 2 + 2;
+        int expected = 4;
+        Assert.assertEquals(actual, expected);
+    }
+
+}
+In this example, the assertEquals method is used to verify that the value of actual is equal to the value of expected.
+If the values are equal, the assertion will pass and the test will continue. If the values are not equal, the assertion will fail and the test will be marked as a failure.
+
+There are many other assertion methods available in the Assert class, including methods for verifying that a value is true,
+false, null, or not null, as well as methods for verifying that two objects are the same or different.
+You can use these methods to create assertions that are appropriate for your specific testing needs.
+
+Here is a list of all of the methods available in the Assert class in TestNG:
+
+assertTrue: Verifies that a boolean value is true.
+assertFalse: Verifies that a boolean value is false.
+assertEquals: Verifies that two values are equal.
+assertNotEquals: Verifies that two values are not equal.
+assertSame: Verifies that two objects refer to the same object.
+assertNotSame: Verifies that two objects do not refer to the same object.
+assertNull: Verifies that an object is null.
+assertNotNull: Verifies that an object is not null.
+assertThat: Verifies that a condition is true.
+fail: Forces a test to fail.
+assertAll: Verifies that a list of assertions are all true.
+assertTimeout: Verifies that a piece of code completes within a given time period.
+assertThrows: Verifies that a piece of code throws an expected exception.
+expectThrows: Verifies that a piece of code throws an expected exception (deprecated).
+expectThrows: Verifies that a piece of code throws an expected exception (deprecated).
+The Assert class also provides a number of other methods for handling assertions, including methods for disabling and enabling assertions,
+as well as methods for specifying a custom message to be displayed when an assertion fails.
+
+Keep in mind that assertions are an important part of the testing process, but they should be used carefully.
+Overuse of assertions can make your tests brittle and difficult to maintain.
+It is generally a good idea to use assertions to verify the most important aspects of your code, and to use other forms of testing,
+such as manual testing or exploratory testing, to validate the overall behavior of your application.
