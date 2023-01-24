@@ -116,7 +116,7 @@ DRIVER UTILITY CLASS
 
 1- We are writing too many lines just to be able to instantiate our WebDriver
 2- We are having hard time to pass the SAME 'driver' instance around in our project.
-    - When we are using any utilty method, currently we have to pass "WebDriver driver" as argument in each utility method.
+    - When we are using any utility method, currently we have to pass "WebDriver driver" as argument in each utility method.
 
     session_id: driver_asd9a8sdf79a8s7df
     driver.quit
@@ -137,7 +137,7 @@ SOLUTION:
 - We will use "Singleton Design pattern"
 
 - What is Singleton Design Pattern?
-- Singleton Design Pattern guarantuees to return same object everytime we want to use the object.
+- Singleton Design Pattern guarantees to return same object everytime we want to use the object.
 
 - How do we apply Singleton Design Pattern?
 #1- We create private constructor

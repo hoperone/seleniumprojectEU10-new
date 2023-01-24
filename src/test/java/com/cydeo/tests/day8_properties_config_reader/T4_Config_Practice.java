@@ -1,20 +1,16 @@
 package com.cydeo.tests.day8_properties_config_reader;
 
 import com.cydeo.tests.utilities.ConfigurationReader;
-import com.cydeo.tests.utilities.WebDriverFactory;
+import com.cydeo.tests.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
+public class T4_Config_Practice {
 
-    public class T4_Config_Practice {
-
-    public WebDriver driver;
+/*    public WebDriver driver;
 
     @BeforeMethod
     public void setupMethod() {
@@ -24,21 +20,23 @@ import java.util.concurrent.TimeUnit;
         driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(ConfigurationReader.getProperty("env"));
-        WebElement googleAcceptButton = driver.findElement(By.xpath("//div[@class='QS5gu sy4vM']"));
-        googleAcceptButton.click();
-    }
+
+    }*/
 
     @Test
     public void google_search_test(){
+        //Driver.getDriver() -> driver
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
+        WebElement googleAcceptButton = Driver.getDriver().findElement(By.xpath("//div[@class='QS5gu sy4vM']"));
+        googleAcceptButton.click();
 
         //3- Write “apple” in search box
-        WebElement googleSearchBox = driver.findElement(By.xpath("//input[@name='q']"));
+        WebElement googleSearchBox = Driver.getDriver().findElement(By.xpath("//input[@name='q']"));
         googleSearchBox.sendKeys(ConfigurationReader.getProperty("keyword") + Keys.ENTER);
         //4- Verify title:
         //Expected: apple - Google Search
         String expectedTitle = ConfigurationReader.getProperty("keyword")+" - Google Suche"; //title verification dynamic. If search value changes, title changes too
-        String actualTitle = driver.getTitle(); //get actual title
+        String actualTitle = Driver.getDriver().getTitle(); //get actual title
 
         Assert.assertEquals(expectedTitle, actualTitle); //Assertion
         //

@@ -93,7 +93,7 @@ public class T1_Smartbear_Software_Link_Verification {
         driver.findElement(By.xpath("//input[@value='Calculate']")).click();
 
         //9. Fill address Info with JavaFaker
-        //• Generate: name, street, city
+        //• Generate: name, street, city, state, zip
         driver.findElement(By.xpath("//input[@name='ctl00$MainContent$fmwOrder$txtName']")).sendKeys(faker.name().fullName()); //Find and fill in Customer name
         driver.findElement(By.xpath("//input[@name='ctl00$MainContent$fmwOrder$TextBox2']")).sendKeys(faker.address().streetAddress());
         driver.findElement(By.xpath("//input[@name='ctl00$MainContent$fmwOrder$TextBox3']")).sendKeys(faker.address().city());

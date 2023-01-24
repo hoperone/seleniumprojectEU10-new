@@ -9,7 +9,7 @@ public class ConfigurationReader {
     //In order to read configuration file we need 3 steps
     //Step 1, Create an object of Properties class from Java.util
     private static Properties properties = new Properties();
-
+    //put inside static block because we need to run this code first
     static {
 
         try {
@@ -28,7 +28,7 @@ public class ConfigurationReader {
         }
 
     }
-
+    //Step 4, - Use properties object and getProperty method to pass "key" and read "value"
     public static String getProperty(String keyword){
         return properties.getProperty(keyword);
     }

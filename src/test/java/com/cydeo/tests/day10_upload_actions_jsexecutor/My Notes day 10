@@ -1,0 +1,27 @@
+What is data driven testing?
+
+Data-driven testing is a method of testing in which test cases are designed to use test data
+and expected results from a data source, such as an Excel spreadsheet or a database.
+The data source is used to drive the execution of the test cases, with the test script
+reading the test data and expected results from the data source and then comparing the
+actual results to the expected results. This allows for automated, repeatable testing
+and can make it easier to maintain test cases, as changes to the
+data source will automatically update the test cases.
+
+https://chat.openai.com/chat/16faf0fc-957a-43e5-a7ca-37ed890471bc
+
+////////////////////////////////////////////////////////////////
+
+What is design pattern in software development?
+
+In software development, a design pattern is a general repeatable solution to a
+commonly occurring problem in software design. A design pattern isn't a finished
+design that can be transformed directly into code. It is a description or template
+for how to solve a problem that can be used in many different situations.
+Design patterns are typically categorized as creational, structural,
+and behavioral patterns. They can help to make code more readable, maintainable, and reusable.
+
+https://chat.openai.com/chat/5b17b5b2-4645-4dae-94e1-c949f1208fff
+
+////////////////////////////////////////////////////////////////
+
