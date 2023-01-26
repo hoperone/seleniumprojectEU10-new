@@ -2,6 +2,8 @@ package com.cydeo.tests.day9_propertiesReview_testBase_DriverUtils;
 
 public class Singleton {
 
+    //How do we implement Singleton Design Pattern?
+
     //#1- create private constructor
     private Singleton() {
     }
